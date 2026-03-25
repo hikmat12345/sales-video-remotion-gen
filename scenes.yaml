@@ -1,0 +1,194 @@
+scenes:
+  # ─── 1. Brand "Accounting Coach" — 0s → 4s ───────────────────────────────────
+  - id: scene-1
+    type: brand
+    start: 0
+    end: 5
+    background: gradient-dark
+    showBadges: true
+    content:
+      line1: "Accounting"
+      line2: "Coach"
+      trademark: true
+
+  # ─── 2. Animated lines — 4s → 10.5s ─────────────────────────────────────────
+  - id: scene-2
+    type: animated-lines
+    start: 6
+    end: 13
+    background: gradient-dark
+    showBadges: true
+    content:
+      lines:
+        - "How to improve your bookkeeping"
+        - "skills so you can become more"
+        - "confident in the workplace"
+
+  # ─── 3. Congratulations — 11.5s → 17s ────────────────────────────────────────
+  - id: scene-3
+    type: headline
+    start: 13
+    end: 21
+    background: gradient-teal
+    showBadges: true
+    content:
+      title: "Congratulations!"
+      textColor: dark
+
+  # ─── 4. Huge Discount — 17.5s → 32s ─────────────────────────────────────────
+  - id: scene-4
+    type: headline
+    start: 22
+    end: 38 
+    background: gradient-teal
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "Huge Discount"
+      textColor: dark
+
+  # ─── 5. People just like yourself — 34s → 58s ────────────────────────────────
+  - id: scene-5
+    type: bullets
+    start: 37
+    end: 64
+    background: gradient-teal
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "People just like yourself"
+      items:
+        - "Bookkeepers"
+        - "Accounting clerk"
+        - "Administrative assistant"
+        - "Newly promoted office manager"
+        - "Complete beginner"
+
+  # ─── 6. How can I take on more responsibility? (dark) — 58s → 64s ────────────
+  - id: scene-6
+    type: headline
+    start: 64
+    end: 72
+    background: gradient-teal-dark
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "How can I gain more confidence at my job?"
+      textColor: light
+
+  # ─── 7. How can I take on more responsibility? (mid) — 64s → 70s ─────────────
+  - id: scene-7
+    type: headline
+    start: 72
+    end: 77
+    background: gradient-teal-dark
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "How can I get quick and reliable answers?"
+      textColor: light
+
+  # ─── 8. How can I take on more responsibility? (mid-2) — 70s → 76s ───────────
+  - id: scene-8
+    type: headline
+    start: 77
+    end: 85
+    background: gradient-teal-dark
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "How can I eliminate confusion?" 
+      textColor: light
+
+  # ─── 9. We make accounting easy to understand — 76s → 81s ────────────────────
+  - id: scene-9
+    type: headline
+    start: 83
+    end: 89
+    background: gradient-teal-dark
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "How can i take on more responsibility?"
+      textColor: light
+
+  # ─── 10. What is the best way to refresh my skills? — 81s → 93s ──────────────
+  - id: scene-10
+    type: headline
+    start: 89
+    end: 101
+    background: gradient-teal-dark
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "What is the best way to refresh my skills?"
+      textColor: light
+
+  # ─── 11. Logo + 20 years in business — 94s → 104s ────────────────────────────
+  - id: scene-11
+    type: logo-badge
+    start: 101
+    end: 114
+    background: gradient-teal
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      name: "AccountingCoach"
+      tagline: "The most trusted name in accounting education"
+      years: "20"
+
+  # ─── 12. Harold Averkamp — 104s → 128s ───────────────────────────────────────
+  - id: scene-12
+    type: instructor
+    start: 104
+    end: 128
+    background: gradient-teal
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      name: "Harold Averkamp, CPA, MBA"
+      leftTitle: "Full-Time Instructor"
+      leftSubtitle: "University of Wisconsin-Whitewater"
+      rightTitle: "Practicing Accountant"
+      rightSubtitle: "Large corporations and small businesses"
+
+  # ─── 13. Our training system — 128s → 148s ───────────────────────────────────
+  - id: scene-13
+    type: bullets
+    start: 128
+    end: 148
+    background: gradient-teal
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "Our training system..."
+      items:
+        - "Simple accounting"
+        - "Avoid unnecessary jargon"
+        - "Provide real-world examples"
+        - "Builds confidence"
+
+  # ─── 14. PRO — 148s → 155s ───────────────────────────────────────────────────
+  - id: scene-14
+    type: badge
+    start: 148
+    end: 155
+    background: gradient-very-dark
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      label: "PRO"
+
+  # 15 big center text/label
+  # 80,000 Members
+  - id: scene-15
+    type: headline
+    start: 155
+    end: 170
+    background: gradient-very-dark
+    showBadges: true
+    # timerLabel: "10:26"
+    content:
+      title: "80,000 Members"
+      textColor: light
+

@@ -1,14 +1,14 @@
-import "./index.css";
-import { Composition } from "remotion";
-import { MyComposition } from "./Composition";
+import './index.css';
+import { Composition } from 'remotion';
+import { SalesVideo, totalDurationInFrames } from './compositions/SalesVideo';
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="MyComp"
-        component={MyComposition}
-        durationInFrames={60}
+        id="SalesVideo"
+        component={SalesVideo}
+        durationInFrames={totalDurationInFrames}
         fps={30}
         width={1280}
         height={720}

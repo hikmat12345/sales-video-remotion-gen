@@ -10,4 +10,21 @@ import { enableTailwind } from '@remotion/tailwind-v4';
 
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
-Config.overrideWebpackConfig(enableTailwind);
+
+Config.overrideWebpackConfig((currentConfig) => {
+  const withTailwind = enableTailwind(currentConfig);
+  return {
+    ...withTailwind,
+    module: {
+      ...withTailwind.module,
+      rules: [
+        ...(withTailwind.module?.rules ?? []),
+        // Load .yaml / .yml files as raw strings so js-yaml can parse them
+        {
+          test: /\.ya?ml$/,
+          type: 'asset/source',
+        },
+      ],
+    },
+  };
+});
