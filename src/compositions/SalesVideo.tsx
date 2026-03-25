@@ -95,7 +95,7 @@ export const SalesVideo: React.FC = () => {
 
   return (
     <AbsoluteFill>
-      <Audio src={staticFile('employee-bookkeeping.mp4')} />
+      <Audio src={staticFile('employee-bookkeeping.mp3')} />
       <TransitionSeries>{seriesChildren}</TransitionSeries>
     </AbsoluteFill>
   );
