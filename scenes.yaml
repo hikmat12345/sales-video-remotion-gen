@@ -156,7 +156,7 @@ scenes:
   - id: scene-13
     type: bullets
     start: 128
-    end: 148
+    end: 151
     background: gradient-teal
     showBadges: true
     # timerLabel: "10:26"
@@ -171,8 +171,8 @@ scenes:
   # ─── 14. PRO — 148s → 155s ───────────────────────────────────────────────────
   - id: scene-14
     type: badge
-    start: 148
-    end: 155
+    start: 151
+    end: 157
     background: gradient-very-dark
     showBadges: true
     # timerLabel: "10:26"
@@ -183,7 +183,7 @@ scenes:
   # 80,000 Members
   - id: scene-15
     type: headline
-    start: 155
+    start: 157
     end: 170
     background: gradient-very-dark
     showBadges: true

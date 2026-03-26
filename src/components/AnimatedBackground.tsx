@@ -1,5 +1,5 @@
 import React from 'react';
-import { interpolate, staticFile, useCurrentFrame } from 'remotion';
+import { Img, interpolate, staticFile, useCurrentFrame } from 'remotion';
 import { BackgroundVariant } from '../lib/sceneLoader';
 
 type Cfg = { image: string; light: boolean };
@@ -46,9 +46,6 @@ export const AnimatedBackground: React.FC<{ variant: string }> = ({ variant }) =
   // ── Brightness breathes gently: ±5% every ~4 s ──
   const brightness = 1 + Math.sin(frame / 125) * 0.05;
 
-  // ── Entry: bg fades in over first 10 frames ──
-  const bgOpacity = interpolate(frame, [0, 10], [0.55, 1], { extrapolateRight: 'clamp' });
-
   // ── Floating orbs ──
   const o1x = 8  + Math.cos(frame / 80) * 4;
   const o1y = 18 + Math.sin(frame / 65) * 7;
@@ -68,17 +65,19 @@ export const AnimatedBackground: React.FC<{ variant: string }> = ({ variant }) =
         position: 'absolute',
         inset: 0,
         overflow: 'hidden',
-        opacity: bgOpacity,
       }}
     >
-      {/* Background image with Ken Burns zoom + brightness */}
-      <div
+      {/* Background image — Remotion <Img> delays render until loaded (no flicker) */}
+      <Img
+        src={cfg.image}
         style={{
           position: 'absolute',
-          inset: '-5%',           // give zoom room without white edges
-          backgroundImage: `url(${cfg.image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center',
           transform: `scale(${zoom})`,
           filter: `brightness(${brightness})`,
           transformOrigin: 'center center',
